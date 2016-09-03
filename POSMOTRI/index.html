@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>Mail</title>
+    <link rel="stylesheet" type="text/css" href="./css/mail.css">
+    <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">
+
+</head>
+<body scroll="no" alink="#5e81a8" vlink="#5e81a8">
+    <div id="toprow">
+        <div>
+            <img id="logo" src="./images/tweechatlogo.png">
+            <img id="search_box_img" src="./images/site2_0003s_0002_Base.png">
+            <input type="text" id="search_box" placeholder="Поиск" maxlength="17">
+        </div>
+    </div>
+    <div id="content">
+        <div id="head">
+            <div id="eclipse">
+                <img src="./User_Images/eclipse.png" />
+            </div>
+            <img src="./User_Images/rectangle23.png" />
+        </div>
+        <div id="block">
+            <img src="./User_Images/block3.png" />
+            <div id="News">
+                <div id="newsicon"><img src="./User_Images/news.png" /></div>
+                <div><p id='newstext' href="#">Новости</p> </div>
+            </div>
+            <div id="feedback">
+                <div id="feedbackicon"><img src="./User_Images/feedback.png" /></div>
+                <div><p id='feedbacktext' href="#">Уведомления</p> </div>
+            </div>
+            <div id="mail">
+                <div id="mailicon"><img src="./User_Images/mail.png" /></div>
+                <div><p id='mailtext' href="#">Сообщения</p> </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainPart">
+        @RenderBody()
+    </div>
+
+    <div id="footer">
+        <p id="tc">TC © 2016</p>
+        <a href="#" id="about">о компании</a>
+        <a href="#" id="terms">правила</a>
+        <a href="#" id="developers">разработчикам</a>
+        <p id="language"></p>
+    </div>
+</body>
+</html>

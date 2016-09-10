@@ -1,0 +1,30 @@
+#dialogs{
+    position: absolute;
+    width: 34.5%;
+    height: 100%;
+    background-image: url("../images/dialogblock.png");
+
+}
+#messages{
+    position: absolute;
+    left: 35%;
+    width: 65%;
+    height: 100%;
+    background-image: url("../images/mailblock.png");
+}
+#search_dialog{
+    position: relative;
+    left:4%;
+    top:0.3%;
+    border-color: transparent;
+    outline: none;
+}
+#lupa{
+    position: relative;
+    width:6% ;
+    top:0.6%;
+    left: 3%;
+}
+#message_box{
+    border-color: transparent;
+}

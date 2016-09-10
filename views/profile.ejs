@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+    <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery-ui.min.js"></script>
+</head>
+<body scroll="no" alink="#5e81a8" vlink="#5e81a8">
+<div id="toprow">
+    <div>
+        <img id="logo" src="/images/tweechatlogo.png">
+        <img id="search_box_img" src="/images/searchbox.png">
+        <input type="text" id="search_box" placeholder="Поиск" maxlength="17">
+    </div>
+</div>
+<div id="content">
+    <div id="head">
+        <div id="eclipse">
+            <img src="/images/eclipse.png" />
+        </div>
+        <img src="/images/rectangle23.png" />
+    </div>
+    <div id="block">
+        <img src="/images/block3.png" />
+        <div id="News">
+            <img id="newsicon" src="/images/news.png" />
+            <button class="but" id='newstext'>Новости</button>
+        </div>
+        <div id="feedback">
+            <img id="feedbackicon" src="/images/feedback.png" />
+            <button class="but" id='feedbacktext'>Уведомления</button>
+        </div>
+        <div id="mail">
+            <img id="mailicon" src="/images/mail.png" />
+            <button class="but" id='mailtext'>Сообщения</button>
+        </div>
+    </div>
+</div>
+
+<div id="mainPart">
+    <div id="news_layout"><%include ./news.ejs%></div>
+    <div id="feedback_layout"><%include ./feedback.ejs%></div>
+    <div id="mail_layout"><%include ./mail.ejs%></div>
+</div>
+
+<div id="footer">
+    <p id="tc">TC © 2016</p>
+    <a href="#" id="about">о компании</a>
+    <a href="#" id="terms">правила</a>
+    <a href="#" id="developers">разработчикам</a>
+    <p id="language">Язык:<%=language%></p>
+</div>
+<script type="text/javascript">
+    $("#search_box").on("focus", function () {
+        $("#search_box_img").attr("src", "/images/searchbox_active.png");
+    });
+    $("#search_box").on("blur", function () {
+        $("#search_box_img").attr("src", "/images/searchbox.png");
+    })
+    $("#sign_button").on("click", function () {
+        var data = {
+            'username': $("#input_area1").val(),
+            'password': $("#input_area2").val()
+        }
+        alert(JSON.stringify(data));
+
+    });
+
+    $('#newstext').on("click",function () {
+        $('#news_layout').css("visibility","visible");
+        $('#feedback_layout').css("visibility","hidden");
+        $('#mail_layout').css("visibility","hidden");
+    })
+    $('#feedbacktext').on("click",function () {
+        $('#news_layout').css("visibility","hidden");
+        $('#feedback_layout').css("visibility","visible");
+        $('#mail_layout').css("visibility","hidden");
+    })
+    $('#mailtext').on("click",function () {
+        $('#news_layout').css("visibility","hidden");
+        $('#feedback_layout').css("visibility","hidden");
+        $('#mail_layout').css("visibility","visible");
+    })
+</script>
+</body>
+</html>

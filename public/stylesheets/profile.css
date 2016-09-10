@@ -37,7 +37,7 @@
   position: absolute;
   left: 28.5%;
   height: 97%;
-  width: 80%;
+  width: 8%;
   display: block;
   color:white;
   background: none;
@@ -80,14 +80,14 @@
 }
 #newsicon
 {
-  position: absolute;
+  position:absolute;
   top: 22%;
   left: 2%;
 }
 #newstext
 {
   position: absolute;
-  top: -18%;
+  top:17%;
   left: 5%;
   z-index: 2000;
   text-decoration: none;
@@ -102,7 +102,7 @@
 #feedbacktext
 {
   position: absolute;
-  top: -18%;
+  top: 17%;
   left: 17%;
   z-index: 2000;
   text-decoration: none;
@@ -111,13 +111,13 @@
 #mailicon
 {
   position: absolute;
-  top: 22%;
+  top: 28%;
   left: 30.6%;
 }
 #mailtext
 {
   position: absolute;
-  top: -18%;
+  top: 17%;
   left: 33.6%;
   z-index: 2000;
   text-decoration: none;
@@ -194,8 +194,27 @@ body
     position:absolute;
     top:22.6%;
     left:27%;
-    background-color:white;
     width:42.9%;
     min-height:70%;
     z-index:10000;
+}
+#news_layout{
+  visibility: visible;
+}
+#feedback_layout{
+  visibility: hidden;
+}
+#mail_layout{
+  visibility: hidden;
+}
+.but{
+  background: none;
+  border-style: none;
+  outline: none;
+}
+.but:hover{
+  cursor: pointer;
+}
+.but:active{
+  font-size: 14px;
 }

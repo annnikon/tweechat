@@ -1,0 +1,30 @@
+﻿@{ 
+    ViewBag.Title = "Welcome | Tweechat";
+    ViewBag.Css = "../Content/Css/Finish.css";
+}
+
+<div id="toprow">
+    <div>
+        <img id="logo" src="~/Content/Images/tweechatlogo.png">
+    </div>
+</div>
+<div id="content">
+    <div id="finishgal">
+    <img src="~/Content/Images/finishgal.png">
+</div>
+        <div id="line3">
+            <img src="~/Content/Images/line3.png">
+        </div>
+    <div id="text">
+        <p id='text1'>Вы успешно завершили регистрацию!</p>
+        <p href="#" id='text2'>Перейти на страницу</p>
+    </div>
+    </div>
+<div id="footer">
+    <p id="tc">TC © 2016</p>
+    <a href="#" id="about">о компании</a>
+    <a href="#" id="terms">правила</a>
+    <a href="#" id="developers">разработчикам</a>
+    <p id="language">Язык:@Html.Action("getName", "Home", new { email = "haqintosh@gmail.com" })</p>
+</div>
+<script type="text/javascript"></script>

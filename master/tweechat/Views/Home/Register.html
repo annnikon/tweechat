@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Welcome | Tweechat";
+    ViewBag.Css = "../Content/Css/register.css";
+}
+<div id="toprow">
+    <div>
+        <img id="logo" src="~/Content/Images/tweechatlogo.png">
+    </div>
+</div>
+
+<form id="content" method="post" action="/Home/Finish">
+    <p id='first'>Регистрация</p>
+    <div id="line3">
+        <img src="~/Content/Images/line3.png">
+    </div>
+    <div id="line2">
+        <img src="~/Content/Images/line2.png">
+    </div>
+    <div id="line4">
+        <img src="~/Content/Images/line3.png">
+    </div>
+    <div id="box1">
+        <p id='nameF'>Имя:</p>
+        <input type="text" name='name'/>
+    </div>
+    <div  id="box2">
+        <p id='surnameF'>Фамилия:</p>
+        <input type="text" name='surname'/>
+    </div>
+    <div  id="box3">
+        <p id='countryF'>Страна:</p>
+        <input type="text" name='country' />
+    </div>
+    <div  id="box4">
+        <p id='ageF'>Возраст:</p>
+        <input type="text" name='age'/>
+    </div>
+    <div id="box5">
+        <p id='genderF'>Пол:</p>
+        <input type="text" name='gender'/>
+    </div>
+    <div id="box6">
+        <p id='langF'>Язык:</p>
+        <input type="text" name='lang'/>
+    </div>
+    <div id="profilepic">
+        <img src="~/Content/Images/profilepic.png">
+    </div>
+    <div id='addphoto'>
+        <p>Добавить фотографию</p>
+    </div>
+    <div id="finishbutton">
+        <input type="submit" id="finish" value="Завершить регистрацию">
+    </div>
+</form>
+<div id="footer">
+    <p id="tc">TC © 2016</p>
+    <a href="#" id="about">о компании</a>
+    <a href="#" id="terms">правила</a>
+    <a href="#" id="developers">разработчикам</a>
+    <p id="language">Язык:@Html.Action("getName", "Home", new { email = "haqintosh@gmail.com" })</p>
+</div>

@@ -4,8 +4,8 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('profile',{
-    title:req.body.name+req.body.surname,
-    language:req.body.language
+    title:"Tweechat",
+    language:"Русский"
   })
 });
 

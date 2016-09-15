@@ -13,7 +13,13 @@ var schema = new Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    name:String,
+    surname:String,
+    country:String,
+    age:String,
+    gender:String,
+    language:String
 });
 
 exports.User = mongoose.model('User',schema);

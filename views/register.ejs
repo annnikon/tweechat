@@ -1,1 +1,67 @@
-<h1><%= language %></h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <script src="/javascripts/jquery.min.js"></script>
+</head>
+<div id="toprow">
+    <div>
+        <img id="logo" src="/images/tweechatlogo.png">
+    </div>
+</div>
+
+<form id="content" method="post" action="/register/finish">
+    <p id='first'>Регистрация</p>
+    <div id="line3">
+        <img src="/images/line3.png">
+    </div>
+    <div id="line2">
+        <img src="/images/line2.png">
+    </div>
+    <div id="line4">
+        <img src="/images/line3.png">
+    </div>
+    <div id="box1">
+        <p id='nameF'>Имя:</p>
+        <input type="text" name='name'/>
+    </div>
+    <div  id="box2">
+        <p id='surnameF'>Фамилия:</p>
+        <input type="text" name='surname'/>
+    </div>
+    <div  id="box3">
+        <p id='countryF'>Страна:</p>
+        <input type="text" name='country' />
+    </div>
+    <div  id="box4">
+        <p id='ageF'>Возраст:</p>
+        <input type="text" name='age'/>
+    </div>
+    <div id="box5">
+        <p id='genderF'>Пол:</p>
+        <input type="text" name='gender'/>
+    </div>
+    <div id="box6">
+        <p id='langF'>Язык:</p>
+        <input type="text" name='lang'/>
+    </div>
+    <div id="profilepic">
+        <img src="/images/profilepic.png">
+    </div>
+    <div id='addphoto'>
+        <p>Добавить фотографию</p>
+    </div>
+    <div id="finishbutton">
+        <input type="submit" id="finish" value="Завершить регистрацию">
+    </div>
+</form>
+<div id="footer">
+    <p id="tc">TC © 2016</p>
+    <a href="#" id="about">о компании</a>
+    <a href="#" id="terms">правила</a>
+    <a href="#" id="developers">разработчикам</a>
+    <p id="language"><%=language%></p>
+</div>
+</html>

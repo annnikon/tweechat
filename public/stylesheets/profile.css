@@ -218,3 +218,11 @@ body
 .but:active{
   font-size: 14px;
 }
+#prof_name{
+  position: absolute;
+  top:28%;
+  left:15%;
+  width: 40%;
+  font-size: 40px;
+  z-index: 2000;
+}

@@ -71,12 +71,36 @@
   position: absolute;
   top: 2%;
   left: 27%;
+  background: white;
+  -webkit-border-radius: 4.5px;
+  -moz-border-radius: 4.5px;
+  border-radius: 4.5px;
+  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -ms-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  transition: all .1s ease-out;
 }
 #block
 {
   position: absolute;
-  top: 16.1%;
+  top: 16.4%;
   left: 27%;
+  background: #5e81a8;
+  -webkit-border-radius: 4.5px;
+  -moz-border-radius: 4.5px;
+  border-radius: 4.5px;
+  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -ms-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  transition: all .1s ease-out;
 }
 #newsicon
 {
@@ -220,11 +244,13 @@ body
 }
 #prof_name{
   position: absolute;
-  top:28%;
+  top:36%;
   left:15%;
   width: 60%;
-  font-size: 40px;
+  font: 25px Verdana, 'Lucida Grande';
+  color:#5e81a8;
   z-index: 2000;
+
 }
 
 a {
@@ -234,9 +260,9 @@ a {
 nav{
   position: absolute;
   height: 100%;
-  left: 72.5%;
+  left: 70.7%;
   z-index: 2000;
-  top: -10%;
+  top: -4%;
 }
 ul {
   position: relative;
@@ -291,7 +317,7 @@ ul li a:hover {
   top: -500px;
 }
 .dropOut {
-  width: 160px;
+  width: 130px;
   background: white;
   float: left;
   position: relative;
@@ -336,6 +362,6 @@ ul li a:hover {
 }
 
 ul li:hover a { color: white; }
-ul li:hover .dropdownContain { top: 130%; }
+ul li:hover .dropdownContain { top: 240%;left:70%; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }

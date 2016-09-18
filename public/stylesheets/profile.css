@@ -10,10 +10,10 @@
 #logo
 {
   position: absolute;
-  top: 27%;
+  top: 26%;
   left: 46%;
-  width: 99px;
-  height: 22px;
+  width: 97px;
+  height: 21px;
   border-style: none;
   z-index:  1000;
 }
@@ -59,6 +59,11 @@
   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
   -o-background-size: 100%; /* Opera 9.6+ */
   background-size: 100%; /* Современные браузеры */
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -ms-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  transition: all .1s ease-out;
 }
 #eclipse
 {
@@ -105,13 +110,14 @@
 #newsicon
 {
   position:absolute;
-  top: 22%;
+  top: 19%;
   left: 2%;
 }
 #newstext
 {
   position: absolute;
-  top:17%;
+  top:19%;
+  font-family:Open Sans;
   left: 5%;
   z-index: 2000;
   text-decoration: none;
@@ -120,30 +126,64 @@
 #feedbackicon
 {
   position: absolute;
-  top: 22%;
-  left: 14.1%;
+  top: 19%;
+  left: 14.9%;
 }
 #feedbacktext
 {
   position: absolute;
-  top: 17%;
-  left: 17%;
+  top: 19%;
+  left: 17.9%;
   z-index: 2000;
+  font-family:Open Sans;
   text-decoration: none;
   color:#ffffff;
 }
 #mailicon
 {
   position: absolute;
-  top: 28%;
-  left: 30.6%;
+  top: 19%;
+  left: 32.5%;
 }
 #mailtext
 {
   position: absolute;
-  top: 17%;
-  left: 33.6%;
+  top: 19%;
+  left: 35.6%;
   z-index: 2000;
+  font-family:Open Sans;
+  text-decoration: none;
+  color:#ffffff;
+}
+#photoicon
+{
+  position: absolute;
+  top: 19%;
+  left: 48.5%;
+}
+#phototext
+{
+  position: absolute;
+  top: 19%;
+  left: 51.4%;
+  z-index: 2000;
+  font-family:Open Sans;
+  text-decoration: none;
+  color:#ffffff;
+}
+#groupsicon
+{
+  position: absolute;
+  top: 19%;
+  left: 65%;
+}
+#groupstext
+{
+  position: absolute;
+  top: 19%;
+  left: 68%;
+  z-index: 2000;
+  font-family:Open Sans;
   text-decoration: none;
   color:#ffffff;
 }
@@ -216,11 +256,12 @@ body
 }
 #mainPart{
     position:absolute;
-    top:22.6%;
+    top:23.2%;
     left:27%;
     width:42.9%;
     min-height:70%;
     z-index:10000;
+
 }
 #news_layout{
   visibility: visible;
@@ -247,7 +288,7 @@ body
   top:36%;
   left:15%;
   width: 60%;
-  font: 25px Verdana, 'Lucida Grande';
+  font: 22px Verdana, 'Lucida Grande';
   color:#5e81a8;
   z-index: 2000;
 

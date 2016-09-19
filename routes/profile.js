@@ -12,7 +12,8 @@ router.get('/:id',function (req,res) {
         name:req.session.name,
         surname:req.session.surname,
         language:req.session.language,
-        s_name:req.session.name
+        s_name:req.session.name,
+        s_id:req.session._id
       });
     }else {
       User.findOne({_id:req.params.id},function (err,user) {
@@ -22,8 +23,9 @@ router.get('/:id',function (req,res) {
             title: "TC | ",
             name:user.name,
             surname:user.surname,
-            language:req.session.name,
-            s_name:req.session.name
+            language:req.session.language,
+            s_name:req.session.name,
+            s_id:req.session._id
           })
         }
         else {

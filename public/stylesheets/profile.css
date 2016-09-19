@@ -74,9 +74,11 @@
 #head
 {
   position: absolute;
-  top: 2%;
+  top: 1%;
   left: 27%;
   background: white;
+  height: 14.8%;
+  width: 42.9%;
   -webkit-border-radius: 4.5px;
   -moz-border-radius: 4.5px;
   border-radius: 4.5px;
@@ -94,6 +96,8 @@
   position: absolute;
   top: 16.4%;
   left: 27%;
+  height: 4%;
+  width: 42.9%;
   background: #5e81a8;
   -webkit-border-radius: 4.5px;
   -moz-border-radius: 4.5px;
@@ -110,14 +114,14 @@
 #newsicon
 {
   position:absolute;
-  top: 19%;
+  top: 25%;
   left: 2%;
 }
 #newstext
 {
   position: absolute;
-  top:19%;
-  font-family:Open Sans;
+  top:25%;
+  font-family:sans-serif;
   left: 5%;
   z-index: 2000;
   text-decoration: none;
@@ -126,64 +130,64 @@
 #feedbackicon
 {
   position: absolute;
-  top: 19%;
+  top: 29%;
   left: 14.9%;
 }
 #feedbacktext
 {
   position: absolute;
-  top: 19%;
+  top: 25%;
   left: 17.9%;
   z-index: 2000;
-  font-family:Open Sans;
+  font-family:sans-serif;
   text-decoration: none;
   color:#ffffff;
 }
 #mailicon
 {
   position: absolute;
-  top: 19%;
+  top: 35%;
   left: 32.5%;
 }
 #mailtext
 {
   position: absolute;
-  top: 19%;
+  top: 25%;
   left: 35.6%;
   z-index: 2000;
-  font-family:Open Sans;
+  font-family:sans-serif;
   text-decoration: none;
   color:#ffffff;
 }
 #photoicon
 {
   position: absolute;
-  top: 19%;
+  top: 30%;
   left: 48.5%;
 }
 #phototext
 {
   position: absolute;
-  top: 19%;
-  left: 51.4%;
+  top: 25%;
+  left: 51.6%;
   z-index: 2000;
-  font-family:Open Sans;
+  font-family:sans-serif;
   text-decoration: none;
   color:#ffffff;
 }
 #groupsicon
 {
   position: absolute;
-  top: 19%;
+  top: 34%;
   left: 65%;
 }
 #groupstext
 {
   position: absolute;
-  top: 19%;
+  top: 25%;
   left: 68%;
   z-index: 2000;
-  font-family:Open Sans;
+  font-family:sans-serif;
   text-decoration: none;
   color:#ffffff;
 }
@@ -251,16 +255,16 @@ body
   user-select:none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  font-family:Open Sans;
+  font-family:sans-serif;
   font-size:13px;
 }
 #mainPart{
-    position:absolute;
-    top:23.2%;
-    left:27%;
-    width:42.9%;
-    min-height:70%;
-    z-index:10000;
+  position:absolute;
+  top:23.2%;
+  left:27%;
+  width:42.9%;
+  min-height:70%;
+  z-index:10000;
 
 }
 #news_layout{
@@ -285,10 +289,10 @@ body
 }
 #prof_name{
   position: absolute;
-  top:36%;
+  top:30%;
   left:15%;
   width: 60%;
-  font: 22px Verdana, 'Lucida Grande';
+  font: 22px sans-serif;;
   color:#5e81a8;
   z-index: 2000;
 
@@ -301,17 +305,16 @@ a {
 nav{
   position: absolute;
   height: 100%;
-  left: 70.7%;
+  left: 70.6%;
   z-index: 2000;
-  top: -4%;
+  top: 13%;
 }
 ul {
   position: relative;
 }
 
 ul li {
-  font: 13px Verdana, 'Lucida Grande';
-  cursor: pointer;
+  font: 12px sans-serif;
   -webkit-transition: padding .05s linear;
   -moz-transition: padding .05s linear;
   -ms-transition: padding .05s linear;
@@ -335,7 +338,6 @@ ul li a {
   transition: all .1s ease-out;
 }
 ul li a:hover {
-  color: #eee;
 }
 
 .dropOut .triangle {
@@ -359,6 +361,7 @@ ul li a:hover {
 }
 .dropOut {
   width: 130px;
+  height:174px;
   background: white;
   float: left;
   position: relative;
@@ -380,14 +383,18 @@ ul li a:hover {
 .dropOut ul {
   float: left;
   padding: 10px 0;
+  left:-7.9%;
+  width:25%;
+
 }
 .dropOut ul li {
   text-align: left;
   float: left;
-  width: 125px;
-  padding: 12px 0 10px 15px;
+  width: 105px;
+  padding: 2px 0 10px 15px;
   margin: 0px 10px;
-  color: #777;
+  font: 12px sans-serif;
+  color: #5e81a8;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -402,7 +409,8 @@ ul li a:hover {
   background: #f6f6f6;
 }
 
-ul li:hover a { color: #777777; }
+ul li:hover a { color: #5e81a8; }
 ul li:hover .dropdownContain { top: 100%;left:70%; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
+

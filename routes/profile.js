@@ -8,7 +8,7 @@ router.get('/:id',function (req,res) {
   if(req.session.name!=null){
     if(req.session._id==req.params.id){
       res.render('profile',{
-        title: "Tweechat | Profile",
+        title: "TC | "+ req.session.name + " " +req.session.surname,
         name:req.session.name,
         surname:req.session.surname,
         language:req.session.language,

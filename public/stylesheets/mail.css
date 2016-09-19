@@ -1,16 +1,37 @@
 #dialogs{
     position: absolute;
-    width: 34.5%;
+    background: white;
     height: 100%;
-    background-image: url("../images/dialogblock.png");
-
+    width: 33.8%;
+    -webkit-border-radius: 4.5px;
+    -moz-border-radius: 4.5px;
+    border-radius: 4.5px;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
 }
 #messages{
     position: absolute;
     left: 35%;
-    width: 65%;
+    background: white;
     height: 100%;
-    background-image: url("../images/mailblock.png");
+    width: 64.9%;
+    -webkit-border-radius: 4.5px;
+    -moz-border-radius: 4.5px;
+    border-radius: 4.5px;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
 }
 #search_dialog{
     position: relative;
@@ -26,5 +47,20 @@
     left: 3%;
 }
 #message_box{
+    position:relative;
+    top:94%;
+    width:95%;
+    height:5%;
+    left:1%;
+    background:white;
+    outline: none;
     border-color: transparent;
+    -webkit-border-radius: 4.5px;
+    -moz-border-radius: 4.5px;
+    border-radius: 4.5px;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
 }

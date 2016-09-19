@@ -4,12 +4,17 @@ var User = require('../models/user').User;
 
 
 router.get('/', function(req, res) {
-  res.render('profile',{
-    title: "Tweechat | Profile",
-    name:req.session.name,
-    surname:req.session.surname,
-    language:req.session.language
-  })
+  if(req.session.name!=null){
+    res.render('profile',{
+      title: "Tweechat | Profile",
+      name:req.session.name,
+      surname:req.session.surname,
+      language:req.session.language
+    })
+  }
+  else{
+    res.redirect('/');
+  }
 });
 
 
@@ -33,4 +38,8 @@ router.post('/login',function (req,res) {
   })
 });
 
+router.get('/logout',function (req,res) {
+    req.session.destroy();
+    res.redirect('/');
+});
 module.exports = router;

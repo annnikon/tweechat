@@ -402,7 +402,7 @@ ul li a:hover {
   background: #f6f6f6;
 }
 
-ul li:hover a { color: white; }
-ul li:hover .dropdownContain { top: 240%;left:70%; }
+ul li:hover a { color: #777777; }
+ul li:hover .dropdownContain { top: 100%;left:70%; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }

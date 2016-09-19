@@ -3,20 +3,38 @@ var router = express.Router();
 var User = require('../models/user').User;
 
 
-router.get('/', function(req, res) {
+
+router.get('/:id',function (req,res) {
   if(req.session.name!=null){
-    res.render('profile',{
-      title: "Tweechat | Profile",
-      name:req.session.name,
-      surname:req.session.surname,
-      language:req.session.language
-    })
-  }
-  else{
+    if(req.session._id==req.params.id){
+      res.render('profile',{
+        title: "Tweechat | Profile",
+        name:req.session.name,
+        surname:req.session.surname,
+        language:req.session.language,
+        s_name:req.session.name
+      });
+    }else {
+      User.findOne({_id:req.params.id},function (err,user) {
+        if(err) res.send(err);
+        if(user!=null){
+          res.render('profile',{
+            title: "TC | ",
+            name:user.name,
+            surname:user.surname,
+            language:req.session.name,
+            s_name:req.session.name
+          })
+        }
+        else {
+          res.send("no such user");
+        }
+      })
+    }
+  }else{
     res.redirect('/');
   }
 });
-
 
 router.post('/login',function (req,res) {
   User.findOne({email:req.body.email},function (err,user) {
@@ -26,7 +44,8 @@ router.post('/login',function (req,res) {
         req.session.name=user.name;
         req.session.surname=user.surname;
         req.session.language=user.language;
-        res.redirect('/profile');
+        req.session._id=user._id;
+        res.redirect('/profile/'+req.session._id);
       }
       else{
         res.send("Incorrect password");
@@ -38,8 +57,5 @@ router.post('/login',function (req,res) {
   })
 });
 
-router.get('/logout',function (req,res) {
-    req.session.destroy();
-    res.redirect('/');
-});
+
 module.exports = router;

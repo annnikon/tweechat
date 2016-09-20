@@ -25,9 +25,6 @@
                         <ul>
                             <li><a href="/profile/<%=s_id%>">Профиль</a></li>
                             <li>Настройки</li>
-                            <li>Статистика</li>
-                            <li>Друзья</li>
-                            <li>Подписчики</li>
                             <li><a href="/logout">Выйти</a></li>
                         </ul>
                     </div>
@@ -41,6 +38,7 @@
     <div id="head">
         <div id="eclipse">
             <img id="profile_photo" src="<%=profile_photo%>" />
+            <img id="addfriends" src="/images/add.png" />
         </div>
         <output type="text" id="prof_name"><%=name+" "+surname%></output>
     </div>
@@ -53,9 +51,9 @@
             <img id="feedbackicon" src="/images/feedback.png" />
             <button class="but" id='feedbacktext'>Уведомления</button>
         </div>
-        <div id="mail">
-            <img id="mailicon" src="/images/mail.png" />
-            <button class="but" id='mailtext'>Сообщения</button>
+        <div id="friends">
+            <img id="friendsicon" src="/images/friends.png" />
+            <button class="but" id='friendstext'>Друзья</button>
         </div>
         <div id="photo">
             <img id="photoicon" src="/images/photo.png" />
@@ -64,6 +62,10 @@
         <div id="groups">
             <img id="groupsicon" src="/images/groups.png" />
             <button class="but" id='groupstext'>Группы</button>
+        </div>
+        <div id="mail">
+            <img id="mailicon" src="/images/mail.png" />
+            <button class="but" id='mailtext'>Сообщения</button>
         </div>
     </div>
 </div>

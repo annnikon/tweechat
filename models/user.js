@@ -19,7 +19,14 @@ var schema = new Schema({
     country:String,
     age:String,
     gender:String,
-    language:String
+    language:String,
+    firends:[{
+        friend_id:String
+    }],
+    profile_photo:{
+        type:String,
+        default:"/images/eclipse.png"
+    }
 });
 
 exports.User = mongoose.model('User',schema);

@@ -40,8 +40,7 @@
 <div id="content">
     <div id="head">
         <div id="eclipse">
-            <img src="/images/eclipse.png" />
-
+            <img id="profile_photo" src="<%=profile_photo%>" />
         </div>
         <output type="text" id="prof_name"><%=name+" "+surname%></output>
     </div>
@@ -80,7 +79,7 @@
     <a href="#" id="about">о компании</a>
     <a href="#" id="terms">правила</a>
     <a href="#" id="developers">разработчикам</a>
-    <p id="language">Язык:<%=language%></p>
+    <p id="language">Язык: <%=language%></p>
 </div>
 <script type="text/javascript">
     $("#search_box").on("focus", function () {

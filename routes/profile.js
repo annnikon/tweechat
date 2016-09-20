@@ -11,6 +11,7 @@ router.get('/:id',function (req,res) {
         title: "TC | "+ req.session.name + " " +req.session.surname,
         name:req.session.name,
         surname:req.session.surname,
+        profile_photo:req.session.profile_photo,
         language:req.session.language,
         s_name:req.session.name,
         s_id:req.session._id
@@ -20,9 +21,10 @@ router.get('/:id',function (req,res) {
         if(err) res.send(err);
         if(user!=null){
           res.render('profile',{
-            title: "TC | ",
+            title: "TC | "+user.name+" "+user.surname,
             name:user.name,
             surname:user.surname,
+            profile_photo:user.profile_photo,
             language:req.session.language,
             s_name:req.session.name,
             s_id:req.session._id
@@ -45,6 +47,7 @@ router.post('/login',function (req,res) {
       if(user.password==req.body.password){
         req.session.name=user.name;
         req.session.surname=user.surname;
+        req.session.profile_photo=user.profile_photo;
         req.session.language=user.language;
         req.session._id=user._id;
         res.redirect('/profile/'+req.session._id);

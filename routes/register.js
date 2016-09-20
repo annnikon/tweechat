@@ -3,6 +3,8 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user').User;
 var user = new User();
+var multiparty = require('multiparty');
+var fs = require('fs');
 
 router.post("/",function(req,res,next){
 
@@ -20,22 +22,47 @@ router.post("/",function(req,res,next){
 });
 
 router.post("/finish",function (req,res,next) {
-    User.findOne({email:user.email},function (err,usr) {
+    var profileid;
+    var form = new multiparty.Form();
+    var path="./public/userphotos/";
 
-        usr.name=req.body.name;
-        usr.surname=req.body.surname;
-        usr.country=req.body.country;
-        usr.age=req.body.age;
-        usr.gender=req.body.gender;
-        usr.language=req.body.lang;
+    form.parse(req,function (err,fields,files) {
+        var img = files.profile_photo[0];
+        User.findOne({email:user.email},function (err,usr) {
 
-        usr.save(function (err,usr) {
-            if(err) console.log(err);
+            profileid=usr._id;
+
+            path+=profileid;
+
+            fs.mkdir(path,function (err) {
+                if(err) console.log(err);
+            });
+
+            fs.readFile(img.path,function (err,data) {
+               path+="/"+img.originalFilename;
+                fs.writeFile(path,data,function (err) {
+                    if(err) console.log(err);
+                });
+            });
+            usr.profile_photo="/userphotos/"+profileid+"/"+img.originalFilename;
+            usr.name=fields.name;
+            usr.surname=fields.surname;
+            usr.country=fields.country;
+            usr.age=fields.age;
+            usr.gender=fields.gender;
+            usr.language=fields.lang;
+
+            usr.save(function (err,usr) {
+                if(err) console.log(err);
+            });
+
         });
-
     });
+
+
     res.render('finish',{
         title:req.body.name+" "+req.body.surname,
+        profile_url:"/profile/"+profileid,
         language:"Русский"
     })
 })

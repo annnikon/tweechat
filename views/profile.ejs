@@ -38,7 +38,20 @@
     <div id="head">
         <div id="eclipse">
             <img id="profile_photo" src="<%=profile_photo%>" />
-            <img id="addfriends" src="/images/add.png" />
+            <%if(!myprofile){
+                switch(isFriend){
+                    case "no":%>
+                        <button id="addfriends"></button>
+                        <%break;
+                    case "yes":%>
+                         <img id="friend" src="/images/complete.png"></img>
+                         <%break;
+                    case "added":%>
+                          <!--<img id="friend" src="/images/complete.png"></img>-->
+                            <p>added</p>
+                          <%break;
+                }
+            }%>
         </div>
         <output type="text" id="prof_name"><%=name+" "+surname%></output>
     </div>
@@ -113,7 +126,19 @@
         $('#news_layout').css("visibility","hidden");
         $('#feedback_layout').css("visibility","hidden");
         $('#mail_layout').css("visibility","visible");
-    })
+    });
+    $('#addfriends').on("click",function () {
+        $.ajax({
+            type:"POST",
+            url:"/profile/add",
+            data:"id=<%=id%>",
+            success:function (data) {
+                if(data.added)
+                    $('#addfriends').css('background-image',"url('../images/complete.png')")
+            }
+        });
+    });
+
 </script>
 </body>
 </html>

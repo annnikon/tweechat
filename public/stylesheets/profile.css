@@ -111,6 +111,22 @@
   position:absolute;
   top:80%;
   left:16.5%;
+  width: 37.2%;
+  height: 60%;
+  -webkit-border-radius: 4.5px;
+  -moz-border-radius: 4.5px;
+  border-radius: 4.5px;
+  background-image: url('../images/add.png');
+}
+#addfriends:focus{
+  outline: none;
+}
+#friend{
+  position:absolute;
+  top:80%;
+  left:16.5%;
+  width: 37.2%;
+  height: 60%;
   -webkit-border-radius: 4.5px;
   -moz-border-radius: 4.5px;
   border-radius: 4.5px;

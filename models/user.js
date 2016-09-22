@@ -21,12 +21,42 @@ var schema = new Schema({
     gender:String,
     language:String,
     firends:[{
-        friend_id:String
+        profile_photo:{
+            type:String
+        },
+        name:{
+            type:String
+        },
+        surname:{
+            type:String
+        },
+        id:{
+            type:String
+        }
     }],
     profile_photo:{
         type:String,
         default:"/images/eclipse.png"
-    }
+    },
+    friends_requests:[{
+        profile_photo:{
+            type:String
+        },
+        name:{
+            type:String
+        },
+        surname:{
+            type:String
+        },
+        id:{
+            type:String
+        }
+    }],
+    added_friends:[{
+        id:{
+            type:String
+        }
+    }]
 });
 
 exports.User = mongoose.model('User',schema);

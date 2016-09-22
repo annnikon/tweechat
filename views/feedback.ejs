@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="../stylesheets/feedback.css"/>
+<div id="requests">
+    <%if(req_users!=null){
+        for(var i=0;i<req_users.length;i++){%>
+            <div class="request">
+                <img class="requserImg" src="..<%=req_users[i].profile_photo%>">
+                <a class="requserName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
+                <output>умоляет добавить его в друзья</output>
+                <button class="requserAcceptButton" id_user="<%=req_users[i].id%>">Добавить в друзья</button>
+                <button class="requserDeclineButton" id_user="<%=req_users[i].id%>">Стратить смерда</button>
+            </div>
+    <%}}%>
+</div>

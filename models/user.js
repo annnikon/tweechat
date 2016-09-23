@@ -20,7 +20,8 @@ var schema = new Schema({
     age:String,
     gender:String,
     language:String,
-    firends:[{
+    friends:[{
+        _id:false,
         profile_photo:{
             type:String
         },
@@ -48,11 +49,12 @@ var schema = new Schema({
         surname:{
             type:String
         },
-        id:{
+        _id:{
             type:String
         }
     }],
     added_friends:[{
+        _id:false,
         id:{
             type:String
         }

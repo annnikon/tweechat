@@ -112,7 +112,7 @@ router.post('/add',function (req,res) {
         name:req.session.name,
         surname:req.session.surname,
         profile_photo:req.session.profile_photo,
-        id:req.session._id
+        _id:req.session._id
       };
       user.friends_requests[user.friends_requests.length]=data;
       user.save(function (err,user) {
@@ -127,6 +127,40 @@ router.post('/add',function (req,res) {
       })
     });
   res.json({added:true});
+});
+
+router.post('/accept',function (req,res) {
+  User.findOne({_id:req.body.id},function (err,user) {
+      var data={
+        name:user.name,
+        surname:user.surname,
+        id:user._id,
+        profile_photo:user.profile_photo
+      };
+
+    User.findOne({_id:req.session._id},{friends:1,name:1,surname:1,profile_photo:1,_id:1},function (err,user) {
+      user.friends[user.friends.length]=data;
+      var s_data={
+        name:user.name,
+        surname:user.surname,
+        profile_photo:user.profile_photo,
+        id:req.session._id
+      };
+      User.update({_id:req.body.id},{$push:{friends:s_data}},function (err) {
+        if(err)console.log(err);
+      });
+      User.update({_id:req.session._id},{$pull:{friends_requests:{_id:req.body.id}}},function (err) {
+        if(err)console.log(err);
+      });
+      User.update({_id:req.body.id},{$pull:{added_friends:{id:req.session._id}}},function (err) {
+        if(err)console.log(err);
+      });
+      user.save(function (err,user) {
+        if(err)console.log(err);
+      })
+    });
+  });
+  res.json({isAdded:"true"});
 });
 
 module.exports = router;

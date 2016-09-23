@@ -6,8 +6,24 @@
                 <img class="requserImg" src="..<%=req_users[i].profile_photo%>">
                 <a class="requserName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
                 <output>умоляет добавить его в друзья</output>
-                <button class="requserAcceptButton" id_user="<%=req_users[i].id%>">Добавить в друзья</button>
-                <button class="requserDeclineButton" id_user="<%=req_users[i].id%>">Стратить смерда</button>
+                <div class="buttons" id="<%=req_users[i].id%>">
+                    <button class="requserAcceptButton" id_user="<%=req_users[i].id%>" onclick="add(this)">Добавить в друзья</button>
+                    <button class="requserDeclineButton" id_user="<%=req_users[i].id%>">Стратить смерда</button>
+                </div>
             </div>
     <%}}%>
 </div>
+<script>
+    var add = function (value) {
+        var id = $(value).attr("id_user");
+        $.ajax({
+            type:"POST",
+            url:"/profile/accept",
+            data:"id="+id,
+            success:function (data) {
+                if(data.isAdded)
+                    $("#"+id).css("background-image","/images/complete.png")
+            }
+        })
+    }
+</script>

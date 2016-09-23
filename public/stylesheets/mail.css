@@ -2,7 +2,7 @@
     position: absolute;
     background: white;
     height: 100%;
-    width: 33.8%;
+    width: 34.1%;
     -webkit-border-radius: 4.5px;
     -moz-border-radius: 4.5px;
     border-radius: 4.5px;
@@ -17,10 +17,10 @@
 }
 #messages{
     position: absolute;
-    left: 35%;
+    left: 34.8%;
     background: white;
     height: 100%;
-    width: 64.9%;
+    width: 65.1%;
     -webkit-border-radius: 4.5px;
     -moz-border-radius: 4.5px;
     border-radius: 4.5px;
@@ -33,17 +33,25 @@
     -o-transition: all .1s ease-out;
     transition: all .1s ease-out;
 }
+#mainline{
+    position: absolute;
+    top: 93.7%;
+}
 #search_dialog{
     position: relative;
     left:4%;
-    top:0.3%;
+    top:0.7%;
     border-color: transparent;
     outline: none;
+}
+#searchline{
+    position: absolute;
+    top: 4.5%;
 }
 #lupa{
     position: relative;
     width:6% ;
-    top:0.6%;
+    top:1%;
     left: 3%;
 }
 #message_box{
@@ -63,4 +71,9 @@
     -ms-transition: all .1s ease-out;
     -o-transition: all .1s ease-out;
     transition: all .1s ease-out;
+}
+#smileicon{
+    position: absolute;
+    top: 95.5%;
+    left: 94.5%;
 }

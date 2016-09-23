@@ -1,4 +1,58 @@
 .requserImg{
+    position: absolute;
+    top: 10%;
     width: 10%;
     height: 10%;
+    left: 0%;
+}
+#requests{
+    position: absolute;
+    top:10%;
+    left:10%;
+
+}
+#feedhead{
+    position: relative;
+    top: -0%;
+    left: 40%;
+    font-family:sans-serif;
+    font-size:18px;
+    color: #5e81a8;
+}
+#feedbox{
+    position: absolute;
+    left: 0%;
+    background: white;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 4.5px;
+    -moz-border-radius: 4.5px;
+    border-radius: 4.5px;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+#grayline{
+    position: absolute;
+    top:0.01%;
+    left:0.11%;
+    width: 99.8%;
+    -webkit-border-radius: 4.5px;
+    -moz-border-radius: 4.5px;
+    border-radius: 4.5px;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+#feedline{
+    position: absolute;
+    left: 0%;
+    top: 6.7%;
 }

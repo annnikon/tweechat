@@ -76,7 +76,7 @@
   position: absolute;
   top: 1%;
   left: 27%;
-  background-image: url('../images/blanches.png');
+  background-color: white;
   height: 14.8%;
   width: 42.9%;
   -webkit-border-radius: 4.5px;
@@ -103,8 +103,8 @@
   top:30%;
   left:16%;
   width: 60%;
-  font: 22px sans-serif;;
-  color:white;
+  font: 22px sans-serif;
+  color: #5e81a8;
   z-index: 2000;
 }
 #addfriends{
@@ -265,7 +265,7 @@
 {
   position: absolute;
   top:11%;
-  left: 25%;
+  left: 27%;
   font-size: 13.5px;
 }
 
@@ -300,7 +300,7 @@
 {
   position: absolute;
   top:11%;
-  left: 70%;
+  left: 63%;
   font-size: 13.5px;
   text-decoration: none;
 }

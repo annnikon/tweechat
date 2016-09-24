@@ -9,10 +9,10 @@
             <div class="request">
                 <img class="requserImg" src="..<%=req_users[i].profile_photo%>">
                 <a class="requserName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
-                <output>хочет добавить вас в друзья</output>
+                <output id="accept">отправил запрос на добавление!</output>
                 <div class="buttons" id="<%=req_users[i].id%>">
-                    <button class="requserAcceptButton" id_user="<%=req_users[i].id%>" onclick="add(this)">Добавить в друзья</button>
-                    <button class="requserDeclineButton" id_user="<%=req_users[i].id%>">Стратить смерда</button>
+                    <button class="requserAcceptButton" id_user="<%=req_users[i].id%>" onclick="add(this)"></button>
+                    <button class="requserDeclineButton" id_user="<%=req_users[i].id%>"></button>
                 </div>
             </div>
     <%}}%>

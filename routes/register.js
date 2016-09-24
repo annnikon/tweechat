@@ -28,7 +28,7 @@ router.post("/",function(req,res,next){
 router.post("/finish",function (req,res,next) {
     var profileid;
     var form = new multiparty.Form();
-    var path="../tweechat/public/userphotos/";
+    var path="../public/userphotos/";
 
     form.parse(req,function (err,fields,files) {
         var img = files.profile_photo[0];

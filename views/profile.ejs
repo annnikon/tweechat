@@ -44,11 +44,10 @@
                         <button id="addfriends"></button>
                         <%break;
                     case "yes":%>
-                         <img id="friend" src="/images/complete.png"></img>
+
                          <%break;
                     case "added":%>
-                          <!--<img id="friend" src="/images/complete.png"></img>-->
-                            <p>added</p>
+                          <img id="friend" src="/images/complete.png"></img>
                           <%break;
                 }
             }%>
@@ -84,9 +83,9 @@
 </div>
 
 <div id="mainPart">
-    <div id="news_layout"><%include ./news.ejs%></div>
-    <div id="feedback_layout"><%include ./feedback.ejs%></div>
-    <div id="mail_layout"><%include ./mail.ejs%></div>
+  <div id="mainPertContent">
+    <%- include friends%>
+  </div>
 </div>
 
 <div id="footer">
@@ -112,15 +111,15 @@
 
     });
 
-    $('#newstext').on("click",function () {
+    $('#newstext').click(function () {
         $('#news_layout').css("visibility","visible");
         $('#feedback_layout').css("visibility","hidden");
         $('#mail_layout').css("visibility","hidden");
     })
-    $('#feedbacktext').on("click",function () {
-        $('#news_layout').css("visibility","hidden");
-        $('#feedback_layout').css("visibility","visible");
-        $('#mail_layout').css("visibility","hidden");
+    $('#feedbacktext').click(function () {
+//        $('#news_layout').css("visibility","hidden");
+//        $('#feedback_layout').css("visibility","visible");
+//        $('#mail_layout').css("visibility","hidden");
     })
     $('#mailtext').on("click",function () {
         $('#news_layout').css("visibility","hidden");
@@ -137,6 +136,10 @@
                     $('#addfriends').css('background-image',"url('../images/complete.png')")
             }
         });
+    });
+    var template = new EJS({url: '/feedback.ejs'});
+    $('#feedback').click( function(){
+        $('#mainPertContent').html(template.render());
     });
 
 </script>

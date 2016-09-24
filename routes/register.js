@@ -2,23 +2,27 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user').User;
-var user = new User();
+
 var multiparty = require('multiparty');
 var fs = require('fs');
 
 router.post("/",function(req,res,next){
 
-    user.email=req.body.email;
-    user.password=req.body.password;
-    
-    user.save(function (err,user,affected) {
-        if(err) console.log(err);
+    User.find({},function (err,data) {
+        var user = new User();
+        user.email=req.body.email;
+        user.password=req.body.password;
+        user._id=data.length;
+        req.session._id=data.length;
+        user.save(function (err,user) {
+            if(err) console.log(err);
+        });
+        res.render('register',{
+            title:"Tweechat | Registration",
+            language:"Русский",
+        })
     });
 
-    res.render('register',{
-         title:"Tweechat | Registration",
-         language:"Русский"
-    })
 });
 
 router.post("/finish",function (req,res,next) {
@@ -28,11 +32,9 @@ router.post("/finish",function (req,res,next) {
 
     form.parse(req,function (err,fields,files) {
         var img = files.profile_photo[0];
-        User.findOne({email:user.email},function (err,usr) {
-
-            profileid=usr._id;
-
-            path+=profileid;
+        User.findOne({_id:req.session._id},function (err,user) {
+            console.log(req.session._id);
+            path+=req.session._id;
 
             fs.mkdir(path,function (err) {
                 if(err) console.log(err);
@@ -44,15 +46,15 @@ router.post("/finish",function (req,res,next) {
                     if(err) console.log(err);
                 });
             });
-            usr.profile_photo="/userphotos/"+profileid+"/"+img.originalFilename;
-            usr.name=fields.name;
-            usr.surname=fields.surname;
-            usr.country=fields.country;
-            usr.age=fields.age;
-            usr.gender=fields.gender;
-            usr.language=fields.lang;
+            user.profile_photo="/userphotos/"+req.session._id+"/"+img.originalFilename;
+            user.name=fields.name;
+            user.surname=fields.surname;
+            user.country=fields.country;
+            user.age=fields.age;
+            user.gender=fields.gender;
+            user.language=fields.lang;
 
-            usr.save(function (err,usr) {
+            user.save(function (err,user) {
                 if(err) console.log(err);
             });
 
@@ -62,7 +64,7 @@ router.post("/finish",function (req,res,next) {
 
     res.render('finish',{
         title:req.body.name+" "+req.body.surname,
-        profile_url:"/profile/"+profileid,
+        profile_url:"/profile/"+req.session._id,
         language:"Русский"
     })
 })

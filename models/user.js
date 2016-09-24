@@ -5,6 +5,10 @@ var mongoose = require('../lib/mongoose'),
     Schema=mongoose.Schema;
 
 var schema = new Schema({
+    _id:{
+        type:Number,
+        required:true
+    },
     email:{
         type:String,
         unique:true,

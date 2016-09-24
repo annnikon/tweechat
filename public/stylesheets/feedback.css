@@ -1,8 +1,8 @@
 .requserImg{
     position: absolute;
     top: 10%;
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 100%;
     left: 0%;
 }
 #requests{

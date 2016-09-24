@@ -12,8 +12,8 @@ router.post("/",function(req,res,next){
         var user = new User();
         user.email=req.body.email;
         user.password=req.body.password;
-        user._id=data.length;
-        req.session._id=data.length;
+        user._id='id'+data.length;
+        req.session._id='id'+data.length;
         user.save(function (err,user) {
             if(err) console.log(err);
         });

@@ -6,7 +6,7 @@ var mongoose = require('../lib/mongoose'),
 
 var schema = new Schema({
     _id:{
-        type:Number,
+        type:String,
         required:true
     },
     email:{

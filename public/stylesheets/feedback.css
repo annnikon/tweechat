@@ -29,25 +29,25 @@
 .requserAcceptButton{
     position: relative;
     top: -2px;
-    left: 8%;
-    width: 106px;
-    height: 21px;
+    left: 13%;
+    width: 109px;
+    height: 24px;
     border: none;
-    -webkit-border-radius: 4.5px;
-    -moz-border-radius: 4.5px;
-    border-radius: 4.5px;
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
     background-image: url('../images/accept.png');
 }
 .requserDeclineButton{
     position: relative;
     top: -2px;
-    left: 15%;
-    width: 106px;
-    height: 21px;
+    left: 16%;
+    width: 109px;
+    height: 24px;
     border: none;
-    -webkit-border-radius: 4.5px;
-    -moz-border-radius: 4.5px;
-    border-radius: 4.5px;
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
     background-image: url('../images/decline.png');
 }
 #feedhead{

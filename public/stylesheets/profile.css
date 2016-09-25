@@ -119,15 +119,19 @@
   border-radius: 3.4px;
   background-image: url('../images/add.png');
 }
+#sendinv{
+  position: absolute;
+  top: 80%;
+}
 #addfriends:focus{
   outline: none;
 }
-#friend{
+#completefr{
   position:absolute;
   top:80%;
   left:16.5%;
-  width: 37.2%;
-  height: 60%;
+  width: 122px;
+  height: 25px;
   -webkit-border-radius: 4.5px;
   -moz-border-radius: 4.5px;
   border-radius: 4.5px;

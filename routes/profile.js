@@ -42,7 +42,8 @@ router.get('/:id/:con',function (req,res) {
                 myprofile:false,
                 isFriend:"yes",
                 id:req.params.id,
-                req_users:[]
+                req_users:[],
+                content:req.params.con
               })
             }
             else
@@ -67,7 +68,8 @@ router.get('/:id/:con',function (req,res) {
                   myprofile:false,
                   isFriend:isFriend,
                   id:req.params.id,
-                  req_users:[]
+                  req_users:[],
+                  content:req.params.con
                 })
               })
             }

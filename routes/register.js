@@ -28,7 +28,7 @@ router.post("/",function(req,res,next){
 router.post("/finish",function (req,res,next) {
     var profileid;
     var form = new multiparty.Form();
-    var path="./public/userphotos/";
+    var path="../public/userphotos/";
 
     form.parse(req,function (err,fields,files) {
         var img = files.profile_photo[0];
@@ -64,7 +64,7 @@ router.post("/finish",function (req,res,next) {
 
     res.render('finish',{
         title:req.body.name+" "+req.body.surname,
-        profile_url:"/profile/"+req.session._id,
+        profile_url:"/",
         language:"Русский"
     })
 })

@@ -53,11 +53,15 @@
     left: 31.5%;
     z-index: 2000;
 }
-#text2
-{
-  position: absolute;
-  top:61.5%;
-  left: 41%;
+#text2{
+    position: absolute;
+    top: 62%;
+    width: 171px;
+    height: 35px;
+    left: 43.8%;
+    -webkit-border-radius: 4.5px;
+    -moz-border-radius: 4.5px;
+    border-radius: 4.5px;
 }
 #footer
 {

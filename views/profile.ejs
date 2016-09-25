@@ -46,7 +46,7 @@
                         <button id="addfriends"></button>
                         <%break;
                     case "yes":%>
-
+                          <img id="sendInv" src="/images/sendinv.png"></img>
                          <%break;
                     case "added":%>
                           <img id="friend" src="/images/complete.png"></img>
@@ -133,7 +133,7 @@
             data:"id=<%=id%>",
             success:function (data) {
                 if(data.added)
-                    $('#addfriends').css('background-image',"url('../images/complete.png')")
+                    $('#addfriends').css('background-image',"url('../images/sendinv.png')")
             }
         });
     });

@@ -4,7 +4,7 @@ var User = require('../models/user').User;
 
 
 
-router.get('/:id',function (req,res) {
+router.get('/:id/:con',function (req,res) {
   if(req.session.name!=null){
     if(req.session._id==req.params.id){
       User.findOne({_id:req.session._id},function (err,user) {
@@ -18,7 +18,8 @@ router.get('/:id',function (req,res) {
                 s_id:req.session._id,
                 myprofile:true,
                 id:req.session._id,
-                req_users:user.friends_requests
+                req_users:user.friends_requests,
+                content:req.params.con
               });
       });
 
@@ -50,7 +51,6 @@ router.get('/:id',function (req,res) {
                 var isFriend;
                   if(data!=null){
                     isFriend="added";
-
                   }
                   else {
                     isFriend="no";
@@ -93,7 +93,7 @@ router.post('/login',function (req,res) {
         req.session.profile_photo=user.profile_photo;
         req.session.language=user.language;
         req.session._id=user._id;
-        res.redirect('/profile/'+req.session._id);
+        res.redirect('/profile/'+req.session._id+'/news');
       }
       else{
         res.send("Incorrect password");

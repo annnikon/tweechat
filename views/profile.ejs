@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <title><%=title%></title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+    <link rel="stylesheet" href="/stylesheets/feedback.css"/>
+    <link rel="stylesheet" href="/stylesheets/friends.css"/>
     <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/jquery-ui.min.js"></script>
 </head>
@@ -84,7 +86,7 @@
 
 <div id="mainPart">
   <div id="mainPertContent">
-    <%- include feedback%>
+    <%- include(content)%>
 
   </div>
 </div>
@@ -111,21 +113,18 @@
         alert(JSON.stringify(data));
 
     });
+    $('#News').on("click",function () {
+        $(location).attr('href','/profile/<%=id%>/news');
+    });
 
-    $('#newstext').click(function () {
-        $('#news_layout').css("visibility","visible");
-        $('#feedback_layout').css("visibility","hidden");
-        $('#mail_layout').css("visibility","hidden");
+    $('#friends').click(function () {
+        $(location).attr('href','/profile/<%=id%>/friends');
     })
     $('#feedbacktext').click(function () {
-//        $('#news_layout').css("visibility","hidden");
-//        $('#feedback_layout').css("visibility","visible");
-//        $('#mail_layout').css("visibility","hidden");
+        $(location).attr('href','/profile/<%=id%>/feedback');
     })
     $('#mailtext').on("click",function () {
-        $('#news_layout').css("visibility","hidden");
-        $('#feedback_layout').css("visibility","hidden");
-        $('#mail_layout').css("visibility","visible");
+        $(location).attr('href','/profile/<%=id%>/mail');
     });
     $('#addfriends').on("click",function () {
         $.ajax({
@@ -137,10 +136,6 @@
                     $('#addfriends').css('background-image',"url('../images/complete.png')")
             }
         });
-    });
-    var template = new EJS({url: '/feedback.ejs'});
-    $('#feedback').click( function(){
-        $('#mainPertContent').html(template.render());
     });
 
 </script>

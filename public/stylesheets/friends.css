@@ -1,22 +1,60 @@
-.requserImg{
-    position: absolute;
-    top: 10%;
-    width: 20%;
-    height: 100%;
-    left: 0%;
+.friendImg{
+    position: relative;
+    top: 32px;
+    width: 80px;
+    height: 80px;
+    left: -45px;
+    border-radius: 50%;
 }
-#requests{
+.onlyFriend{
     position: absolute;
-    top:10%;
-    left:10%;
+    top:3.5%;
+    left:13%;
 
+}
+.friendName{
+    position: relative;
+    top: 0px;
+    left: -30px;
+    font-weight: bold;
+    font-family:sans-serif;
+    font-size:17px;
+}
+.deleteFriend{
+    position: relative;
+    top: -2px;
+    left: 457px;
+    width: 109px;
+    height: 24px;
+    border: none;
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
+    background-image: url('../images/deletebutton.png');
+}
+.sendmessage{
+    position: relative;
+    top: -33px;
+    left: 320px;
+    width: 157px;
+    height: 24px;
+    border: none;
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
+    background-image: url('../images/sendmessage.png');
+}
+#friendsline{
+    position: absolute;
+    left: 3.1%;
+    top: 22%;
 }
 #feedhead{
     position: relative;
-    top: -0%;
-    left: 40%;
+    top: 0.5%;
+    left: 42%;
     font-family:sans-serif;
-    font-size:18px;
+    font-size:16px;
     color: #5e81a8;
 }
 #feedbox{
@@ -51,7 +89,7 @@
     -o-transition: all .1s ease-out;
     transition: all .1s ease-out;
 }
-#feedline{
+#line4{
     position: absolute;
     left: 0%;
     top: 6.7%;

@@ -93,19 +93,19 @@
 }
 #profile_photo{
   position:relative;
-  top:10%;
+  top:-5px;
   left:0%;
-  width:90px;
+  width: 102px;
+  height: 102px;
   border-radius: 50%;
 }
 #prof_name{
-  position: absolute;
+  position: relative;
   top:30%;
-  left:16%;
-  width: 60%;
+  left:140px;
+  font-weight: bold;
   font: 22px sans-serif;
   color: #5e81a8;
-  z-index: 2000;
 }
 #addfriends{
   position:absolute;

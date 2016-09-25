@@ -2,17 +2,17 @@
 <div id="feedbox">
     <img id="grayline" src="/images/grayline.png">
     <h1 type="text" id="feedhead">Мои друзья</h1>
-    <img id="feedline" src="/images/feedline.png">
-    <div id="requests">
+    <img id="line4" src="/images/line4.png">
+    <img id="friendsline" src="/images/friendsline.png">
+    <div id="friends">
         <%if(req_users!=null){
         for(var i=0;i<req_users.length;i++){%>
-        <div class="request">
-            <img class="requserImg" src="..<%=req_users[i].profile_photo%>">
-            <a class="requserName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
-            <output>хочет добавить вас в друзья</output>
+        <div class="onlyFriend">
+            <img class="friendImg" src="..<%=req_users[i].profile_photo%>">
+            <a class="friendName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
             <div class="buttons" id="<%=req_users[i].id%>">
-                <button class="requserAcceptButton" id_user="<%=req_users[i].id%>" onclick="add(this)">Добавить в друзья</button>
-                <button class="requserDeclineButton" id_user="<%=req_users[i].id%>">Стратить смерда</button>
+                <button class="deleteFriend" id_user="<%=req_users[i].id%>"></button>
+                <button class="sendmessage" id_user="<%=req_users[i].id%>"></button>
             </div>
         </div>
         <%}}%>

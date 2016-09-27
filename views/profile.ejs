@@ -105,26 +105,18 @@
     $("#search_box").on("blur", function () {
         $("#search_box_img").attr("src", "/images/searchbox.png");
     })
-    $("#sign_button").on("click", function () {
-        var data = {
-            'username': $("#input_area1").val(),
-            'password': $("#input_area2").val()
-        }
-        alert(JSON.stringify(data));
-
-    });
     $('#News').on("click",function () {
-        $(location).attr('href','/profile/<%=id%>/news');
+        $(location).attr('href','/<%=id%>/news');
     });
 
     $('#friends').click(function () {
-        $(location).attr('href','/profile/<%=id%>/friends');
+        $(location).attr('href','/<%=id%>/friends');
     })
     $('#feedbacktext').click(function () {
-        $(location).attr('href','/profile/<%=id%>/feedback');
+        $(location).attr('href','/<%=id%>/feedback');
     })
     $('#mailtext').on("click",function () {
-        $(location).attr('href','/profile/<%=id%>/mail');
+        $(location).attr('href','/<%=id%>/mail');
     });
     $('#addfriends').on("click",function () {
         $.ajax({

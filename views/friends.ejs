@@ -4,16 +4,33 @@
     <img id="line4" src="/images/line4.png">
     <img id="friendsline" src="/images/friendsline.png">
     <div id="friends">
-        <%if(req_users!=null){
-        for(var i=0;i<req_users.length;i++){%>
+        <%if(friends!=null){
+        for(var i=0;i<friends.length;i++){%>
         <div class="onlyFriend">
-            <img class="friendImg" src="..<%=req_users[i].profile_photo%>">
-            <a class="friendName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
-            <div class="buttons" id="<%=req_users[i].id%>">
-                <button class="deleteFriend" id_user="<%=req_users[i].id%>"></button>
-                <button class="sendmessage" id_user="<%=req_users[i].id%>"></button>
+            <img class="friendImg" src="..<%=friends[i].profile_photo%>">
+            <a class="friendName" href="/profile/<%=friends[i].id%>"><%=friends[i].name+" "+friends[i].surname%></a>
+            <div class="buttons" id="<%=friends[i].id%>">
+                <button class="deleteFriend" id_user="<%=friends[i].id%>" onclick="del(this)"></button>
+                <button class="sendmessage" id_user="<%=friends[i].id%>"></button>
             </div>
         </div>
         <%}}%>
     </div>
 </div>
+<script>
+    var del = function (id) {
+        $.ajax({
+            type:"POST",
+            url:"/deletefriend",
+            data:"id="+$(id).attr("id_user"),
+            success:function (data) {
+                if(data.result){
+                    $(location).attr('href','/<%=id%>/friends');
+                }else {
+                    alert("Не удалось удалить пользователя");
+                }
+            }
+        })
+    };
+
+</script>

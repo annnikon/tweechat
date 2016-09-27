@@ -2,17 +2,17 @@
     <img id="grayline" src="/images/grayline.png">
     <h1 type="text" id="feedhead">Мои друзья</h1>
     <img id="line4" src="/images/line4.png">
-    <img id="friendsline" src="/images/friendsline.png">
     <div id="friends">
         <%if(friends!=null){
         for(var i=0;i<friends.length;i++){%>
         <div class="onlyFriend">
             <img class="friendImg" src="..<%=friends[i].profile_photo%>">
-            <a class="friendName" href="/profile/<%=friends[i].id%>"><%=friends[i].name+" "+friends[i].surname%></a>
+            <a class="friendName" href="/<%=friends[i].id%>/news"><%=friends[i].name+" "+friends[i].surname%></a>
             <div class="buttons" id="<%=friends[i].id%>">
                 <button class="deleteFriend" id_user="<%=friends[i].id%>" onclick="del(this)"></button>
                 <button class="sendmessage" id_user="<%=friends[i].id%>"></button>
             </div>
+            <img class="friendsline" src="/images/friendsline.png">
         </div>
         <%}}%>
     </div>

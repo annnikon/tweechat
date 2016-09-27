@@ -10,9 +10,9 @@
                 <img class="requserImg" src="..<%=req_users[i].profile_photo%>">
                 <a class="requserName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
                 <output id="accept">отправил запрос на добавление!</output>
-                <div class="buttons" id="<%=req_users[i].id%>">
-                    <button class="requserAcceptButton" id_user="<%=req_users[i].id%>" onclick="add(this)"></button>
-                    <button class="requserDeclineButton" id_user="<%=req_users[i].id%>"></button>
+                <div class="buttons" >
+                    <button class="requserAcceptButton" id="<%=req_users[i].id%>0" id_user="<%=req_users[i].id%>" onclick="add(this)"></button>
+                    <button class="requserDeclineButton" id="<%=req_users[i].id%>1" id_user="<%=req_users[i].id%>"></button>
                 </div>
             </div>
     <%}}%>
@@ -23,11 +23,19 @@
         var id = $(value).attr("id_user");
         $.ajax({
             type:"POST",
-            url:"/profile/accept",
+            url:"/accept",
             data:"id="+id,
             success:function (data) {
-                if(data.isAdded)
-                    $("#"+id).css("background-image","/images/complete.png")
+                if (data.isAdded) {
+                    $("#" + id +"0").css({
+                        "background-image":"url('../images/complete.png')",
+                        "position":"absolute",
+
+
+                    });
+                    $("#"+ id +"1").css("display","none");
+
+                }
             }
         })
     }

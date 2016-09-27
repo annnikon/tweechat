@@ -25,7 +25,7 @@
                     <div class="dropOut">
                         <div class="triangle"></div>
                         <ul>
-                            <li><a href="/profile/<%=s_id%>">Профиль</a></li>
+                            <li><a href="/<%=s_id%>/news">Профиль</a></li>
                             <li>Настройки</li>
                             <li><a href="/logout">Выйти</a></li>
                         </ul>
@@ -46,10 +46,10 @@
                         <button id="addfriends"></button>
                         <%break;
                     case "yes":%>
-                          <img id="sendInv" src="/images/sendinv.png"></img>
+                          <img id="sendInv" src="/images/complete.png"></img>
                          <%break;
                     case "added":%>
-                          <img id="friend" src="/images/complete.png"></img>
+                          <img id="friend" src="/images/sendinv.png"></img>
                           <%break;
                 }
             }%>
@@ -121,10 +121,10 @@
     $('#addfriends').on("click",function () {
         $.ajax({
             type:"POST",
-            url:"/profile/add",
+            url:"/add",
             data:"id=<%=id%>",
             success:function (data) {
-                if(data.added)
+                if(data.isAdded)
                     $('#addfriends').css('background-image',"url('../images/sendinv.png')")
             }
         });

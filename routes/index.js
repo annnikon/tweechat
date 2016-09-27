@@ -43,7 +43,7 @@ router.get('/:id/:con',function (req,res) {
             User.findOne({_id:req.params.id},function (err,user) {
                 if(err) res.send(err);
                 if(user!=null){
-                    User.findOne({_id:req.session._id,'friends:$:id':req.params.id},function (err,data) {
+                    User.findOne({_id:req.session._id,'friends.$.id':req.body.id},function (err,data) {
                         if(err)console.log(err);
                         if(data!=null){
                             console.log(data)
@@ -68,11 +68,12 @@ router.get('/:id/:con',function (req,res) {
                                 var isFriend;
                                 if(data!=null){
                                     isFriend="added";
+
                                 }
                                 else {
                                     isFriend="no";
+
                                 }
-                                console.log(isFriend)
                                 res.render('profile',{
                                     title: "TC | "+user.name+" "+user.surname,
                                     name:user.name,
@@ -144,7 +145,7 @@ router.post('/add',function (req,res) {
             })
         })
     });
-    res.json({added:true});
+    res.json({isAdded:true});
 });
 
 router.post('/accept',function (req,res) {

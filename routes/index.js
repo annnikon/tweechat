@@ -24,7 +24,7 @@ router.get('/:id/:con',function (req,res) {
         if(req.session._id==req.params.id){
             User.findOne({_id:req.session._id},function (err,user) {
                 res.render('profile',{
-                    title: "TC | "+ req.session.name + " " +req.session.surname,
+                    title: ""+ req.session.name + " " +req.session.surname,
                     name:req.session.name,
                     surname:req.session.surname,
                     profile_photo:req.session.profile_photo,
@@ -48,7 +48,7 @@ router.get('/:id/:con',function (req,res) {
                         if(data!=null){
                             console.log(data)
                             res.render('profile',{
-                                title: "TC | "+user.name+" "+user.surname,
+                                title: ""+user.name+" "+user.surname,
                                 name:user.name,
                                 surname:user.surname,
                                 profile_photo:user.profile_photo,
@@ -75,7 +75,7 @@ router.get('/:id/:con',function (req,res) {
 
                                 }
                                 res.render('profile',{
-                                    title: "TC | "+user.name+" "+user.surname,
+                                    title: ""+user.name+" "+user.surname,
                                     name:user.name,
                                     surname:user.surname,
                                     profile_photo:user.profile_photo,

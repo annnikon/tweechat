@@ -9,8 +9,8 @@
             <img class="friendImg" src="..<%=friends[i].profile_photo%>">
             <a class="friendName" href="/<%=friends[i].id%>/news"><%=friends[i].name+" "+friends[i].surname%></a>
             <div class="buttons" id="<%=friends[i].id%>">
-                <button class="deleteFriend" id_user="<%=friends[i].id%>" onclick="del(this)"></button>
-                <button class="sendmessage" id_user="<%=friends[i].id%>"></button>
+                <button class="deleteFriend" id_user="<%=friends[i].id%>" onclick="del(this)">Удалить пользователя</button>
+                <button class="sendmessage" id_user="<%=friends[i].id%>">Написать сообщение</button>
             </div>
             <img class="friendsline" src="/images/friendsline.png">
         </div>

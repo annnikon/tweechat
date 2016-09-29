@@ -1,6 +1,6 @@
 .friendImg{
     position: relative;
-    top: 32px;
+    top: 28px;
     width: 80px;
     height: 80px;
     left: -45px;
@@ -11,18 +11,14 @@
     display: inline-block;
     top:-12px;
     height: 100px;
-    left:13%;
+    left:11.6%;
     float:left;
     clear: both;
 
 }
-#friends{
-
-}
-
 .friendName{
     position: relative;
-    top: 0px;
+    top: -6px;
     left: -30px;
     font-weight: bold;
     font-family:sans-serif;
@@ -30,31 +26,39 @@
 }
 .deleteFriend{
     position: relative;
-    top: -2px;
-    left: 457px;
-    width: 109px;
-    height: 24px;
+    top: -14px;
+    left: 430px;
+    width: 166px;
+    height: 23px;
     border: none;
-    -webkit-border-radius: 3.6px;
-    -moz-border-radius: 3.6px;
-    border-radius: 3.6px;
+    outline:none;
+    cursor:pointer;
+    font: 12px sans-serif;
+    color: white;
+    -webkit-border-radius: 3.4px;
+    -moz-border-radius: 3.4px;
+    border-radius: 3.4px;
     background-image: url('../images/deletebutton.png');
 }
 .sendmessage{
     position: relative;
-    top: -33px;
-    left: 320px;
-    width: 157px;
-    height: 24px;
+    top: -41px;
+    left: 260px;
+    width: 166px;
+    height: 23px;
     border: none;
-    -webkit-border-radius: 3.6px;
-    -moz-border-radius: 3.6px;
-    border-radius: 3.6px;
+    outline:none;
+    cursor:pointer;
+    font: 12px sans-serif;
+    color: #55677d;
+    -webkit-border-radius: 3.4px;
+    -moz-border-radius: 3.4px;
+    border-radius: 3.4px;
     background-image: url('../images/sendmessage.png');
 }
 .friendsline{
     position: relative;
-    left: 2.6%;
+    left: -9%;
     top: 22%;
 }
 #feedhead{

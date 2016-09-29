@@ -43,13 +43,13 @@
             <%if(!myprofile){
                 switch(isFriend){
                     case "no":%>
-                        <button id="addfriends"></button>
+                        <button id="addfriends">Добавить в друзья</button>
                         <%break;
                     case "yes":%>
-                          <img id="sendInv" src="/images/complete.png"></img>
+                          <button id="compl">У вас в друзьях</button>
                          <%break;
                     case "added":%>
-                          <img id="friend" src="/images/sendinv.png"></img>
+                          <button id="sendInv">Заявка отправлена</button>
                           <%break;
                 }
             }%>

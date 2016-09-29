@@ -109,19 +109,51 @@
 }
 #addfriends{
   position:absolute;
-  top: 80%;
-  left: 130%;
-  width: 122px;
-  height: 25px;
+  top: 70%;
+  left: 117%;
+  width: 120px;
+  height: 23px;
   border: none;
+  outline:none;
+  cursor:pointer;
+  font: 12px sans-serif;
+  color: white;
   -webkit-border-radius: 3.4px;
   -moz-border-radius: 3.4px;
   border-radius: 3.4px;
   background-image: url('../images/add.png');
 }
-#sendinv{
+#compl{
   position: absolute;
-  top: 80%;
+  top: 70%;
+  left: 117%;
+  width: 120px;
+  height: 23px;
+  border: none;
+  outline:none;
+  cursor:pointer;
+  font: 12px sans-serif;
+  color: #55677d;
+  -webkit-border-radius: 3.4px;
+  -moz-border-radius: 3.4px;
+  border-radius: 3.4px;
+  background-image: url('../images/complete.png');
+}
+#sendInv{
+  position:absolute;
+  top: 70%;
+  left: 117%;
+  width: 120px;
+  height: 23px;
+  border: none;
+  font: 12px sans-serif;
+  color: #55677d;
+  outline:none;
+  cursor:pointer;
+  -webkit-border-radius: 3.4px;
+  -moz-border-radius: 3.4px;
+  border-radius: 3.4px;
+  background-image: url('../images/sendinv.png');
 }
 #addfriends:focus{
   outline: none;

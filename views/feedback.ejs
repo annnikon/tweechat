@@ -11,8 +11,8 @@
                 <a class="requserName" href="/profile/<%=req_users[i].id%>"><%=req_users[i].name+" "+req_users[i].surname%></a>
                 <output id="accept">отправил запрос на добавление!</output>
                 <div class="buttons" >
-                    <button class="requserAcceptButton" id="<%=req_users[i].id%>0" id_user="<%=req_users[i].id%>" onclick="add(this)"></button>
-                    <button class="requserDeclineButton" id="<%=req_users[i].id%>1" id_user="<%=req_users[i].id%>"></button>
+                    <button class="requserAcceptButton" id="<%=req_users[i].id%>0" id_user="<%=req_users[i].id%>" onclick="add(this)">Принять заявку</button>
+                    <button class="requserDeclineButton" id="<%=req_users[i].id%>1" id_user="<%=req_users[i].id%>">Отклонить заявку</button>
                 </div>
             </div>
     <%}}%>
@@ -28,9 +28,14 @@
             success:function (data) {
                 if (data.isAdded) {
                     $("#" + id +"0").css({
-                        "background-image":"url('../images/complete.png')",
+                        "background-image":"url('../images/success123.png')",
                         "position":"absolute",
-
+                        "top":"66px",
+                        "left":"80px",
+                        "width":"161px",
+                        "height":"23px",
+                        "font": "12px sans-serif",
+                        "color": "white"
 
                     });
                     $("#"+ id +"1").css("display","none");

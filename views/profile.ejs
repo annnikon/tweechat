@@ -18,22 +18,17 @@
         <img id="search_box_img" src="/images/searchbox.png">
         <input type="text" id="search_box" placeholder="Поиск" maxlength="17">
         <nav>
-        <ul>
-            <li class="drop">
-                <b><a href="#"><%=s_name%></a></b>
-                <div class="dropdownContain">
-                    <div class="dropOut">
-                        <div class="triangle"></div>
-                        <ul>
-                            <li><a href="/<%=s_id%>/news">Профиль</a></li>
-                            <li>Настройки</li>
-                            <li><a href="/logout">Выйти</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
+            <ul class="dropmenu">
+                <li><a href="#"><%=s_name%></a>
+                    <ul class="submenu">
+                        <li><a href="#">Профиль</a></li>
+                        <li><a href="#">Настройки</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
+
     </div>
 </div>
 <div id="content">
@@ -125,7 +120,10 @@
             data:"id=<%=id%>",
             success:function (data) {
                 if(data.isAdded)
-                    $('#addfriends').css('background-image',"url('../images/sendinv.png')")
+                    $('#addfriends').css({
+                        'background-image':"url('../images/sendinv.png')",
+                        'color':'#55677d'
+                   }).text("Заявка отправлена")
             }
         });
     });

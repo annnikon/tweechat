@@ -114,11 +114,11 @@
     transition: all .1s ease-out;
 }
 #grayline{
-    position:absolute;
+    position:relativee;
     top:0.01%;
     left:0.11%;
     width: 99.8%;
-    height: 5.5%;
+    height: 7.1%;
     -webkit-border-radius: 4.5px;
     -moz-border-radius: 4.5px;
     border-radius: 4.5px;
@@ -131,12 +131,11 @@
 #line4{
     position: absolute;
     left: 0%;
-    top: 5.4%;
+    top: 7.1%;
     width: 470px;
 }
 #mailhead{
     position: relative;
-    top: -0.2%;
     left: 37%;
     font: 16px sans-serif;
     color: #5e81a8;

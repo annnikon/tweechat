@@ -62,10 +62,9 @@
 }
 #feedhead{
     position: relative;
-    top: 0.5%;
-    left: 42%;
-    font-family:sans-serif;
-    font-size:16px;
+    top: 0.4%;
+    left: 43.5%;
+    font: 16px sans-serif;
     color: #5e81a8;
 }
 #feedbox{
@@ -87,7 +86,7 @@
     transition: all .1s ease-out;
 }
 #grayline{
-    position: absolute;
+    position: relative;
     top:0.01%;
     left:0.11%;
     width: 99.8%;
@@ -101,7 +100,8 @@
     transition: all .1s ease-out;
 }
 #line4{
-    position: absolute;
+    position: relative;
     left: 0%;
     top: 6.7%;
+    width: 720px;
 }

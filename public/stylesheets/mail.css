@@ -86,6 +86,7 @@
      position: relative;
      top: 25%;
      left: 0.5%;
+     cursor: pointer;
  }
 #cameraIcon{
      position: relative;
@@ -93,6 +94,7 @@
      height: 14px;
      top: 22.5%;
      left: 0.7%;
+     cursor: pointer;
  }
 #mailButton{
     position: relative;
@@ -102,6 +104,7 @@
     color: white;
     font: 13px sans-serif;
     background: #5e81a8;
+    cursor: pointer;
     outline: none;
     border-color: transparent;
     -webkit-border-radius: 4.5px;
@@ -136,6 +139,7 @@
 }
 #mailhead{
     position: relative;
+    top: 0.7%;
     left: 37%;
     font: 16px sans-serif;
     color: #5e81a8;

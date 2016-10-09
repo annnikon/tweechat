@@ -17,19 +17,18 @@
         <img id="logo" src="/images/tweechatlogo.png">
         <img id="search_box_img" src="/images/searchbox.png">
         <input type="text" id="search_box" placeholder="Поиск" maxlength="17">
-        <nav>
-            <ul class="dropmenu">
-                <li><a href="#"><%=s_name%></a>
-                    <ul class="submenu">
-                        <li><a href="#">Профиль</a></li>
-                        <li><a href="#">Настройки</a></li>
-                        <li><a href="#">Выйти</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
     </div>
+            <nav class="dropdown" id="dropdown">
+                <input type="checkbox" id="drop1" />
+                <label for="drop1" class="dropdown_button"><%=s_name%> <span class="arrow"></span></label>
+                <img id="profile_photo2" src="<%=profile_photo%>" />
+                <ul class="dropdown_content">
+                    <li><a href="#">Профиль</a></li>
+                    <li><a href="#">Уведомления</a></li>
+                    <li><a href="#">Настройки</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+        </nav>
 </div>
 <div id="content">
     <div id="head">

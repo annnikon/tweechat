@@ -25,12 +25,12 @@
             <nav class="dropdown" id="dropdown">
                 <input type="checkbox" id="drop1" />
                 <label for="drop1" class="dropdown_button"><%=s_name%> <span class="arrow"></span></label>
-                <img id="profile_photo2" src="<%=profile_photo%>" />
+                <img id="profile_photo2" src="<%=s_profile_photo%>" />
                 <ul class="dropdown_content">
-                    <li><a href="#">Профиль</a></li>
-                    <li><a href="#">Уведомления</a></li>
-                    <li><a href="#">Настройки</a></li>
-                    <li><a href="#">Выйти</a></li>
+                    <li><a href="/<%=s_id%>/news">Профиль</a></li>
+                    <li><a href="/<%=s_id%>/feedback">Уведомления</a></li>
+                    <li><a href="/settings">Настройки</a></li>
+                    <li><a href="/logout">Выйти</a></li>
                 </ul>
         </nav>
 </div>
@@ -91,9 +91,9 @@
 
 <div id="footer">
     <p id="tc">TC © 2016</p>
-    <a href="#" id="about">о компании</a>
-    <a href="#" id="terms">правила</a>
-    <a href="#" id="developers">разработчикам</a>
+    <a href="/about" id="about">о компании</a>
+    <a href="/about" id="terms">правила</a>
+    <a href="/about" id="developers">разработчикам</a>
     <p id="language">Язык: <%=language%></p>
 </div>
 <script type="text/javascript">

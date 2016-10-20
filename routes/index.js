@@ -28,6 +28,7 @@ router.get('/:id/:con',function (req,res) {
                     name:req.session.name,
                     surname:req.session.surname,
                     profile_photo:req.session.profile_photo,
+                    s_profile_photo:req.session.profile_photo,
                     language:req.session.language,
                     s_name:req.session.name,
                     s_id:req.session._id,
@@ -52,6 +53,7 @@ router.get('/:id/:con',function (req,res) {
                                 name:user.name,
                                 surname:user.surname,
                                 profile_photo:user.profile_photo,
+                                s_profile_photo:req.session.profile_photo,
                                 language:req.session.language,
                                 s_name:req.session.name,
                                 s_id:req.session._id,
@@ -79,6 +81,7 @@ router.get('/:id/:con',function (req,res) {
                                     name:user.name,
                                     surname:user.surname,
                                     profile_photo:user.profile_photo,
+                                    s_profile_photo:req.session.profile_photo,
                                     language:req.session.language,
                                     s_name:req.session.name,
                                     s_id:req.session._id,
@@ -191,5 +194,10 @@ router.post('/deletefriend',function (req,res) {
         });
     });
 });
-
+router.get('/about', function (reg, res) {
+    res.render('about', {})
+})
+router.get('/settings', function (reg, res) {
+    res.render('settings', {})
+})
 module.exports = router;

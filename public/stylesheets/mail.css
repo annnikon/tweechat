@@ -117,7 +117,7 @@
     transition: all .1s ease-out;
 }
 #grayline{
-    position:relativee;
+    position:relative;
     top:0.01%;
     left:0.11%;
     width: 99.8%;
@@ -143,4 +143,12 @@
     left: 37%;
     font: 16px sans-serif;
     color: #5e81a8;
+}
+.sender{
+    position: relative;
+    margin-left: 80%;
+}
+.getter{
+    position: relative;
+    margin-left: 5%;
 }

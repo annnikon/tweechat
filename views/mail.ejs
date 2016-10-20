@@ -8,10 +8,35 @@
     <img id="grayline" src="/images/grayline.png">
     <h1 type="text" id="mailhead">Мои сообщения</h1>
     <img id="line4" src="/images/line4.png">
+    <ul></ul>
 </div>
 <div id="messages">
-    <input placeholder="Введите Ваше сообщение..." type="text" id="message_box">
-    <img id="smileIcon" src="/images/smile_icon.png">
-    <img id="cameraIcon" src="/images/cameraicon.png">
-    <button id="mailButton" src="/images/mailbutton.png">Отправить</button>
+    <form>
+        <input placeholder="Введите Ваше сообщение..." type="text" id="message_box" autofocus>
+        <img id="smileIcon" src="/images/smile_icon.png">
+        <img id="cameraIcon" src="/images/cameraicon.png">
+        <input type="submit" value="Отправить" id="mailButton" src="/images/mailbutton.png"/>
+    </form>
 </div>
+<script>
+    var socket = io.connect();
+
+    var form = $('#messages form');
+    var ul = $('#messagestext ul');
+
+    form.submit(function () {
+        var text = $('#message_box').val();
+        $('#message_box').val('');
+
+        socket.emit('message',text,function (data) {
+            $('<li class="sender">').appendTo(ul).text(text);
+            console.log(data);
+        });
+
+        return false;
+    })
+
+    socket.on('message',function (text) {
+        $('<li class="getter">').appendTo(ul).text(text);
+    })
+</script>

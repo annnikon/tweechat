@@ -26,6 +26,7 @@ app.set('view engine', 'ejs');
 app.set('view cache', false);
 
 io.listen(server);
+
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -74,10 +75,12 @@ app.use(function(err, req, res, next) {
 });
 
 io.on('connection',function (socket) {
-  console.log("new connection");
-  socket.on('disconnect',function () {
-    console.log("disconnected");
+
+  socket.on('message',function (text,callback) {
+    socket.broadcast.emit('message',text);
+    callback('ok');
   })
+
 });
 
 
